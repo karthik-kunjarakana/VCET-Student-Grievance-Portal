@@ -2,6 +2,7 @@
 
 backend/.env
 backend/app.yaml
+backend\.gcloudignore
 
 *.log
 *.tmp
