@@ -1,6 +1,6 @@
 // Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyA4nqVlXf8jz13oTuuTt-ZfNK3fg7PkCaY",
+  apiKey: "YOUR API KEY HERE",
   authDomain: "grievance-cell-cad1a.firebaseapp.com",
   projectId: "grievance-cell-cad1a"
 };
