@@ -1,5 +1,3 @@
-
-`
 # VCET Student Grievance Portal
 
 A transparent platform for managing and resolving student grievances, built to streamline communication between students and administrative staff.
