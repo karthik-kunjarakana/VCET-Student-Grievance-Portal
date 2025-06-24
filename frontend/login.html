@@ -1,0 +1,40 @@
+<!-- <!DOCTYPE html>
+<html>
+<head><title>Login</title></head>
+<body>
+  <h2>Login</h2>
+  <input type="email" id="login-email" placeholder="Email"><br>
+  <input type="password" id="login-password" placeholder="Password"><br>
+  <button onclick="login()">Login</button>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>  
+  <script src="app.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css"> <!-- Assuming your CSS is in styles.css -->
+</head>
+<body>
+  <div class="container">
+    <h2>Login</h2>
+    <div class="form-group">
+      <label for="login-email">Email</label>
+      <input type="email" id="login-email" placeholder="Email">
+    </div>
+    <div class="form-group">
+      <label for="login-password">Password</label>
+      <input type="password" id="login-password" placeholder="Password">
+    </div>
+    <button onclick="login()">Login</button>
+    <p>Don't have an account? <a href="signup.html" style="color: var(--primary); font-weight: 600;">Sign up</a></p>
+  </div>
+  
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

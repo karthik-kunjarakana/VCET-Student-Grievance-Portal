@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Submit Grievance</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Submit Your Grievance</h2>
+    <div id="status-message"></div>
+    
+    <div class="form-group">
+      <input type="text" id="name" placeholder="Your Name" required>
+    </div>
+    
+    <div class="form-group">
+      <input type="text" id="usn" placeholder="USN" required>
+    </div>
+    
+    <div class="form-group">
+      <textarea id="complaint" placeholder="Your Complaint" required rows="5"></textarea>
+    </div>
+    
+    <div class="form-group">
+      <label for="severity">Severity Level (1-10):</label>
+      <input type="range" id="severity" min="1" max="10" value="5" required>
+      <span id="severity-value">5</span>
+    </div>
+    
+    <button id="submit-btn" onclick="submitGrievance()">Submit Grievance</button>
+    <button class="btn-danger" onclick="firebase.auth().signOut(); location.href='index.html'">Logout</button>
+
+  
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="app.js"></script>
+  
+  <script>
+    // Show severity value
+    const severitySlider = document.getElementById('severity');
+    const severityValue = document.getElementById('severity-value');
+    
+    severitySlider.addEventListener('input', function() {
+      severityValue.textContent = this.value;
+    });
+    
+    // Check if user is logged in
+    firebase.auth().onAuthStateChanged(function(user) {
+      if (!user) {
+        alert('Please login first');
+        window.location.href = 'login.html';
+      }
+    });
+  </script>
+</body>
+</html>
